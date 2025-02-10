@@ -15,7 +15,7 @@ model = joblib.load('model_defense.joblib')
 scaler = joblib.load('scaler.joblib')
 
 # Load dataset
-x = pd.read_csv('C:\\Users\\hp\\x_defense.csv')
+x = pd.read_csv('x_defense.csv')
 x.drop('Unnamed: 0' ,axis = 1 ,inplace = True)
 locations = x.columns[7:]
 area_types = x.columns[3:7]
