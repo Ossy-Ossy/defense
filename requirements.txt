@@ -3,3 +3,4 @@ pandas
 numpy
 keras
 tensorflow
+scikit-learn==1.2.2
