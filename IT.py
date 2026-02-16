@@ -40,7 +40,7 @@ def predict_price(x, location, area, total_sqft, bath, bhk, scaler):
         fv[area_index] = 1
 
     fv = fv.reshape(1, -1)
-    return float(model.predict(fv)[0])
+    return model.predict(fv)[0].item()
 st.sidebar.write('Select the location and area type')
 
 location = st.sidebar.selectbox("Select your desired location", locations)
@@ -62,6 +62,7 @@ bhk = st.slider("How many Bedroom, Living Room Apartment?",
 if st.button("Estimate"):
     price = predict_price(x, location, area, total_sqft, bath, bhk, scaler) * 1140
     st.success(f"🏠 The estimated price of the house is **${price:,.2f}**")
+
 
 
 
