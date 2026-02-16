@@ -62,4 +62,5 @@ bhk = st.slider("How many Bedroom, Living Room Apartment?",
 
 if st.button("Estimate"):
     price = predict_price(x, location, area, total_sqft, bath, bhk, scaler) * 1140
-    st.success(f"🏠 The estimated price of the house is **${float(price):.2f}** ")
+    st.success(f"🏠 The estimated price of the house is **${float(price):,.2f}** ")
+
